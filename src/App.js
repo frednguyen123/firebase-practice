@@ -46,8 +46,10 @@ function App() {
 
   async function getPostById(id){
     // const hardcodedId = 'wWEYysUBt9EcZEwN7CoS';
-    const postRef = doc(db, "posts", id);
+    const hardcodedId = '6y4qdlOZKKoSHmtOR9ix';
+    const postRef = doc(db, "posts", hardcodedId);
     const postSnap = await getDoc(postRef);
+    console.log(postSnap.data())
     return postSnap.data();
     // console.log(post);  
   }
